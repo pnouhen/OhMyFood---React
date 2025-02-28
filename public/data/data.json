@@ -1,8 +1,10 @@
 [
   {
+    "id": "5a8d2b4f",
     "restaurant": "La palette du gout",
     "titlepage": "La palette du gout - Menu - Ohmyfood",
-    "image": "src=./asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+    "image": "../../src/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+    "new" : 1,
     "entrees": [
       {
         "name": "Fricassée d'escargots",
@@ -56,9 +58,11 @@
     ]
   },
   {
+    "id": "d9f1c0a7",
     "restaurant": "La note enchantée",
     "titlepage": "La note enchantée - Menu - Ohmyfood",
-    "image": "./asset/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg",
+    "image": "../../src/assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg",
+    "new" : 1,
     "entrees": [
       {
         "name": "Ravioles de foie gras",
@@ -117,9 +121,10 @@
     ]
   },
   {
+    "id": "3b7e9c6d",
     "restaurant": "À la française",
     "titlepage": "À la française - Menu - Ohmyfood",
-    "image": "./asset/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
+    "image": "../../src/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg",
     "entrees": [
       {
         "name": "Tartare de poulpe acidulé",
@@ -173,9 +178,10 @@
     ]
   },
   {
+    "id":"1e4f3d2b",
     "restaurant": "Le délice des sens",
     "titlepage": "Le délice des sens - Menu - Ohmyfood",
-    "image": "./asset/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
+    "image": "../../src/assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
     "entrees": [
       {
         "name": "Tartare de thon",

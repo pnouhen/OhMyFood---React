@@ -1,0 +1,19 @@
+.fa-heart {
+  margin: 10px;
+  font-size: 21px;
+  transition: color 200ms ease, background 200ms ease, transform 200ms ease;
+  &:hover {
+    font-weight: 900;
+    background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.active {
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
