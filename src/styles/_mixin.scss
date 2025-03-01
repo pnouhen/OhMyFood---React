@@ -1,0 +1,7 @@
+@mixin fonctionnement-restaurants__container {
+    width: 90%;
+    margin: auto;
+    @media screen and (min-width: 1025px) {
+      width: 73%;
+    }
+  }
