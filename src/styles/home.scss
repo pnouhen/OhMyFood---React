@@ -10,7 +10,7 @@ header {
 // Location
 .location {
   height: 50px;
-  background-color: $color-localisation-restaurants;
+  background-color: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,7 +30,7 @@ header {
 .reservation {
   height: 179px;
   padding: 30px 0 30px 0;
-  background-color: white;
+  background-color: $color-reservation-restaurants;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -55,7 +55,7 @@ header {
 }
 /* Fonctionnement */
 .fonctionnement {
-  @include fonctionnement-restaurants;
+  @include fonctionnement-restaurants__container;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

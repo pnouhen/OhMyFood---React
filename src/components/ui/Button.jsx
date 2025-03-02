@@ -1,7 +1,7 @@
 import "../../styles/button.scss"
 
-export default function Button({content}){
+export default function Button({localisation, content}){
     return(
-        <button>{content}</button> 
+        <a href={localisation} className="button">{content}</a> 
     )
 }

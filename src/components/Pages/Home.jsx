@@ -6,22 +6,22 @@ import Footer from "../structures/Footer";
 import "../../styles/home.scss";
 
 export default function Home() {
-    return (
-      <>
-        <Header />
-        <Loader />
-        <section className="location">
-          <i className="fa-solid fa-location-dot"></i>
-          <p>Paris, Belleville</p>
-        </section>
-        <section className="reservation">
-          <h1>Réservez le menu qui vous convient</h1>
-          <p>
-            Découvrez des restaurants d’exception, sélectionnés par nos soins.
-          </p>
-          <Button content="Explorer nos restaurants" />
-        </section>
-        <section className="fonctionnement">
+  return (
+    <>
+      <Loader />
+      <Header />
+      <section className="location">
+        <i className="fa-solid fa-location-dot"></i>
+        <p>Paris, Belleville</p>
+      </section>
+      <section className="reservation">
+        <h1>Réservez le menu qui vous convient</h1>
+        <p>
+          Découvrez des restaurants d’exception, sélectionnés par nos soins.
+        </p>
+        <Button localisation="#restaurants" content="Explorer nos restaurants" />
+      </section>
+      <section className="fonctionnement">
         <h2>Fonctionnement</h2>
         <ul>
           <li>
@@ -44,8 +44,8 @@ export default function Home() {
           </li>
         </ul>
       </section>
-        <Cards />
-        <Footer />
-      </>
-    );
+      <Cards />
+      <Footer />
+    </>
+  );
 }

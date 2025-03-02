@@ -18,7 +18,8 @@ export default function Cards() {
   return (
     <>
       <GenerateData setData={setData} />
-      <section className="restaurants">
+      <section id="restaurants" className="restaurants">
+        <div className="restaurants__container">
         <h2>Restaurants</h2>
         {data ? (
           data.map((item) => (
@@ -39,6 +40,7 @@ export default function Cards() {
         ) : (
           <div>Chargement...</div>
         )}
+        </div>
       </section>
     </>
   );
