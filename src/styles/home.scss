@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./mixin";
+
 header {
   .imgResto,
   .fa-arrow-left {
@@ -7,7 +10,7 @@ header {
 // Location
 .location {
   height: 50px;
-  background-color: #eaeaea;
+  background-color: $color-localisation-restaurants;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,4 +53,85 @@ header {
     color: #353535;
   }
 }
+/* Fonctionnement */
+.fonctionnement {
+  @include fonctionnement-restaurants;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  padding: 50px 0 50px 12px;
+  h2 {
+    margin-left: -12px;
+  }
+  ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    @media screen and (min-width: 1025px) {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+  li {
+    position: relative;
+    width: 100%;
+    counter-increment: list-counter;
+    list-style: none;
+    @media screen and (min-width: 1025px) {
+      width: 31%;
+    }
+    &::before {
+      position: absolute;
+      content: counter(list-counter) "";
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-color: #9356dc;
+      color: #ffffff;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 24px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
 
+  div {
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    border-radius: 20px;
+    background-color: #f6f6f6;
+    box-shadow: 0px 4px 15px 0px #00000026;
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: auto;
+  }
+  i {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    text-align: center;
+  }
+  .fa-mobile-screen-button {
+    width: 13px;
+    height: 20px;
+  }
+  .fa-mobile-screen-button,
+  .fa-list {
+    color: #7e7e7e;
+  }
+  .fa-store {
+    height: 18px;
+    color: #9356dc;
+  }
+}

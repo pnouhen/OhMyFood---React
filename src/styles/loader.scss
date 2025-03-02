@@ -1,0 +1,115 @@
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(153, 226, 208, 1);
+    animation: loaderAnimation 3s forwards;
+    @keyframes loaderAnimation {
+      99% {
+        opacity: 1;
+        z-index: 1;
+      }
+      100% {
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+    &___container {
+      position: relative;
+      width: 50vw;
+      height: 50vw;
+      @media screen and (min-width: 769px) {
+        width: 50vh;
+        height: 50vh;
+      }
+      .cercle {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        animation: boxShadowAnimation 1s linear infinite,
+          rotation 3s linear infinite;
+      }
+      @keyframes boxShadowAnimation {
+        0% {
+          box-shadow: 0 -10px 0 0 #9356dc, 0 10px 0 0 #ff79da;
+        }
+        50% {
+          box-shadow: 0 -20px 0 0 #9356dc, 0 20px 0 0 #ff79da;
+        }
+        100% {
+          box-shadow: 0 -10px 0 0 #9356dc, 0 10px 0 0 #ff79da;
+        }
+      }
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(1080deg);
+        }
+      }
+      i {
+        font-size: 5vw;
+        opacity: 0;
+        @media screen and (min-width: 769px) {
+          font-size: 5vh;
+        }
+      }
+      .fa-solid {
+        animation: appear 500ms forwards;
+        @keyframes appear {
+          to {
+            opacity: 1;
+          }
+        }
+      }
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        object-fit: contain;
+        opacity: 0;
+        animation: appear 500ms forwards;
+        animation-delay: 500ms;
+      }
+      @keyframes appear {
+        to {
+          opacity: 1;
+        }
+      }
+      .fa-location-dot {
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        animation-delay: 1000ms;
+      }
+      .fa-mobile-screen-button {
+        position: absolute;
+        top: 30%;
+        right: 15%;
+        transform: translate(-50%, -50%);
+        animation-delay: 1500ms;
+      }
+      .fa-list {
+        position: absolute;
+        bottom: 20%;
+        right: 12.5%;
+        transform: translate(-50%, -50%);
+        animation-delay: 2000ms;
+      }
+      .fa-store {
+        position: absolute;
+        bottom: 20%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        animation-delay: 2500ms;
+      }
+    }
+  }
