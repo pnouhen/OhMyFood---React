@@ -3,7 +3,7 @@ import { useEffect } from "react";
 export default function GenerateData({setData}){
     const {id} = useParams()
     useEffect(() => {
-        fetch("./../../../public/data/data.json")
+        fetch("/data/data.json")
           .then((response) => response.json())
           .then((data) => {
             // To browse the database to recover the accommodation with his id 
