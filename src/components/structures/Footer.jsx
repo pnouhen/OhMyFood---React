@@ -1,5 +1,5 @@
 import "../../styles/footer.scss"
-import logo from "../../assets/images/logo/ohmyfood.png"
+import logo from "/assets/images/logo/ohmyfood.png"
 
 export default function Footer(){
     return(

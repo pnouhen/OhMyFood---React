@@ -1,4 +1,4 @@
-import logo from "../../assets/images/logo/ohmyfood.png"
+import logo from "/assets/images/logo/ohmyfood.png"
 import "../../styles/loader.scss"
 
 export default function Loader(){
