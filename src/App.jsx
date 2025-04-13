@@ -7,17 +7,13 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div>
         <Home />
-      </div>
     ),
   },
   {
     path: "/menu/:id",
     element: (
-      <div>
         <Menu />
-      </div>
     ),
   },
 ]);

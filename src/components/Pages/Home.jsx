@@ -1,3 +1,5 @@
+import { Helmet } from 'react-helmet-async';
+
 import Header from "../structures/Header";
 import Loader from "../ui/Loader";
 import Button from "../ui/Button";
@@ -8,6 +10,13 @@ import "../../styles/home.scss";
 export default function Home() {
   return (
     <>
+      <Helmet>
+        <title>Oh My Food</title>
+        <meta
+          name="description"
+          content="Avec OhMyFood, réservez le menu de votre choix dans les restaurants gastronomiques les plus tendances. Découvrez les cartes et commandez en ligne."
+        />
+      </Helmet>
       <Loader />
       <Header />
       <section className="location">
@@ -19,7 +28,10 @@ export default function Home() {
         <p>
           Découvrez des restaurants d’exception, sélectionnés par nos soins.
         </p>
-        <Button localisation="#restaurants" content="Explorer nos restaurants" />
+        <Button
+          localisation="#restaurants"
+          content="Explorer nos restaurants"
+        />
       </section>
       <section className="fonctionnement">
         <h2>Fonctionnement</h2>

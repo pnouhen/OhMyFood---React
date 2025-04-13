@@ -25,7 +25,7 @@ export default function Cards() {
           data.map((item) => (
             <article key={item.id}>
           <NavLink to={`/Menu/${item.id}`} key={item.id}>
-          <img src={item.image} alt="Picture of La note enchantée" />
+          <img src={item.image} alt={`Photo de ${item.restaurant}`} />
                 <span className={item.new == 1 ? "new" : ""}>
                   {item.new == 1 ? "Nouveau" : ""}
                 </span>

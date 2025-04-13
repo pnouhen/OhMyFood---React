@@ -1,5 +1,7 @@
 import { NavLink, useParams } from "react-router";
 import { useEffect, useState } from "react";
+import { Helmet } from 'react-helmet-async';
+
 import Header from "../structures/Header";
 import GenerateData from "../service/GenerateData";
 import Heart from "../ui/Heart";
@@ -62,7 +64,14 @@ export default function Menu() {
         <GenerateData setData={setData} />
         {data ? (
           <>
-            <img className="imgResto" src={data.image} alt={data.restaurant}></img>
+          <Helmet>
+        <title>{`Menu de ${data.restaurant}`}</title>
+        <meta
+          name="description"
+          content={`Découvrez la carte du restaurant ${data.restaurant}`}
+        />
+      </Helmet>
+            <img className="imgResto" src={data.image} alt={`Photo de ${data.restaurant}`}></img>
             <section className="menu">
               <div className="titleRestaurant">
                 <h1>{data.restaurant}</h1>
