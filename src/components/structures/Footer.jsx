@@ -1,5 +1,4 @@
 import "../../styles/footer.scss"
-import logo from "/assets/images/logo/ohmyfood.png"
 
 export default function Footer(){
     return(
@@ -12,7 +11,7 @@ export default function Footer(){
           <li>Mentions légales</li>
           <li><a href="mailto:example1@exemple.com">Contact</a></li>
         </ul>
-        <img src={logo} alt="Logo website" />
+        <img src="/assets/images/logo/ohmyfood.webp" alt="Logo website" />
       </footer> 
     )
 }

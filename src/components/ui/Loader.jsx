@@ -1,4 +1,3 @@
-import logo from "/assets/images/logo/ohmyfood.png"
 import "../../styles/loader.scss"
 
 export default function Loader(){
@@ -6,7 +5,7 @@ export default function Loader(){
         <div className="loader">
       <div className="loader___container">
         <div className="cercle"></div>
-      <img className="logo" src={logo} alt="Logo website" />
+      <img className="logo" src="/assets/images/logo/ohmyfood.webp" alt="Logo website" />
         <i className="fa-solid fa-location-dot"></i>
         <i className="fa-solid fa-mobile-screen-button"></i>
         <i className="fa-solid fa-list"></i>
