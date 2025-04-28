@@ -4,11 +4,15 @@ import Heart from "../Heart/Heart";
 
 import "./cards.scss";
 
-export default function Cards({item}) {
+export default function Cards({ item }) {
   return (
     <article key={item.id}>
       <NavLink to={`/Menu/${item.id}`} key={item.id}>
-        <img src={item.image} alt={`Photo de ${item.restaurant}`} />
+        <img
+          src={item.image}
+          alt={`Photo de ${item.restaurant}`}
+          loading="lazy"
+        />
         <span className={item.new == 1 ? "new" : ""}>
           {item.new == 1 ? "Nouveau" : ""}
         </span>

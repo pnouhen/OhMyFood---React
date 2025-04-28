@@ -10,19 +10,19 @@ import Footer from "../../components/Footer/Footer";
 import "./home.scss";
 
 export default function Home() {
-  const [data, setData] =useState([])
-    const [loading, setLoading] = useState(true)
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-      fetchData()
-      .then(data => setData(data))
-      .catch(err => console.log(err))
-      .finally(() => setLoading(false))
-    })
+  useEffect(() => {
+    fetchData()
+      .then((data) => setData(data))
+      .catch((err) => console.log(err))
+      .finally(() => setLoading(false));
+  });
 
-if(loading){
-  return <p className="loading">Chargement...</p>
-}
+  if (loading) {
+    return <p className="loading">Chargement...</p>;
+  }
 
   return (
     <>
@@ -74,14 +74,14 @@ if(loading){
           </ul>
         </section>
         <section id="restaurants" className="restaurants">
-        <div className="restaurants__container">
-        <h2>Restaurants</h2>
-          {data.map((item) => (
-           <Cards item={item} key={item.id}/> 
-          ))}
-        </div>
-      </section>
-      </main>      
+          <div className="restaurants__container">
+            <h2>Restaurants</h2>
+            {data.map((item) => (
+              <Cards item={item} key={item.id} />
+            ))}
+          </div>
+        </section>
+      </main>
       <Footer />
     </>
   );

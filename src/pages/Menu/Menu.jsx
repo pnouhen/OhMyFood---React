@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { fetchData } from "../../service/fetchData";
@@ -51,6 +51,7 @@ export default function Menu() {
           className="imgResto"
           src={data.image}
           alt={`Photo de ${data.restaurant || "Restaurant"}`}
+          loading="lazy"
         />
         <section className="menu">
           <div className="titleRestaurant">
@@ -59,9 +60,9 @@ export default function Menu() {
           </div>
 
           {/* Entrées */}
-          <MenuCategory category="starter" title="Entrées" data={data}/>
-          <MenuCategory category="mainCourses" title="Plats" data={data}/>
-          <MenuCategory category="desserts" title="Desserts" data={data}/>
+          <MenuCategory category="starter" title="Entrées" data={data} />
+          <MenuCategory category="mainCourses" title="Plats" data={data} />
+          <MenuCategory category="desserts" title="Desserts" data={data} />
           <Button content="Commander" />
         </section>
       </main>
