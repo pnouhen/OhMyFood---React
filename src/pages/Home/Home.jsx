@@ -5,7 +5,8 @@ import { fetchData } from "../../service/fetchData";
 import Header from "../../components/Header/Header";
 import Loader from "../../components/Loader/Loader";
 import Button from "../../components/Button/Button";
-import Cards from "../../components/Cards/Cards";
+import FonctionnementCards from "../../components/FonctionnementCards/FonctionnementCards";
+import RestaurantCards from "../../components/RestaurantCards/RestaurantCards";
 import Footer from "../../components/Footer/Footer";
 import "./home.scss";
 
@@ -53,31 +54,25 @@ export default function Home() {
         <section className="fonctionnement">
           <h2>Fonctionnement</h2>
           <ul>
-            <li>
-              <div>
-                <i className="fa-solid fa-mobile-screen-button"></i>
-                <p>Choisissez un restaurant</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="fa-solid fa-list"></i>
-                <p>Composez votre menu</p>
-              </div>
-            </li>
-            <li>
-              <div>
-                <i className="fa-solid fa-store"></i>
-                <p>Dégustez au restaurant</p>
-              </div>
-            </li>
+            <FonctionnementCards
+              className="fa-solid fa-mobile-screen-button"
+              text="Choisissez un restaurant"
+            />
+            <FonctionnementCards
+              className="fa-solid fa-list"
+              text="Composez votre menu"
+            />
+            <FonctionnementCards
+              className="fa-solid fa-store"
+              text="Dégustez au restaurant"
+            />            
           </ul>
         </section>
         <section id="restaurants" className="restaurants">
           <div className="restaurants__container">
             <h2>Restaurants</h2>
             {data.map((item) => (
-              <Cards item={item} key={item.id} />
+              <RestaurantCards item={item} key={item.id} />
             ))}
           </div>
         </section>

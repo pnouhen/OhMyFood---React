@@ -31,9 +31,12 @@ export default function Menu() {
       .finally(() => setLoading(false));
   }, [id]);
 
-  if (loading) {
+  if (loading || !data) {
     return <p className="loading">Chargement...</p>;
   }
+
+
+
   return (
     <>
       <Header arrowLeft="fa-solid fa-arrow-left" />
