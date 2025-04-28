@@ -1,0 +1,112 @@
+article {
+  width: 93%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  opacity: 0;
+  animation: appear 300ms forwards;
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    width: 60%;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 16px;
+    margin: 0;
+  }
+  h2::after {
+    content: "";
+    width: 40px;
+    display: block;
+    border-bottom: 3px solid rgba(153, 226, 208, 1);
+    padding-top: 10px;
+  }
+  .choice {
+    height: 69px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    .info-group {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 100%;
+      padding: 10px 20px;
+      overflow: hidden;
+      .title {
+        margin: 0;
+        font-weight: 500;
+        font-size: 18px;
+      }
+      .description {
+        margin: 0;
+        font-weight: 300;
+        font-size: 15.04px;
+      }
+      .title,
+      .description {
+        max-width: 80%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .price {
+        position: absolute;
+        right: 20px;
+        bottom: 10px;
+        font-weight: 700;
+        font-size: 15.04px;
+      }
+    }
+    .check {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 0;
+      height: 100%;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-color: rgba(153, 226, 208, 1);
+      opacity: 0;
+      transition: all 400ms ease;
+      .fa-check {
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 1);
+        font-size: 15px;
+        color: rgba(153, 226, 208, 1);
+      }
+    }
+    .move {
+      width: 59px;
+      opacity: 1;
+    }
+  }
+}
+.starter {
+  animation-delay: 300ms;
+}
+.mainCourses {
+  animation-delay: 600ms;
+}
+.desserts {
+  animation-delay: 900ms;
+}

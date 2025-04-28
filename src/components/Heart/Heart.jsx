@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "../../styles/heart.scss"
+import "./heart.scss"
 
 export default function Heart(){
     const [click, setclick] =useState(false)

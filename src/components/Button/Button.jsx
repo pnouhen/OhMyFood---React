@@ -1,4 +1,4 @@
-import "../../styles/button.scss"
+import "./button.scss"
 
 export default function Button({localisation, content}){
     return(

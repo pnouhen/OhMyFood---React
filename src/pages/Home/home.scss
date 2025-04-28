@@ -1,0 +1,139 @@
+@import "../../styles/variables";
+@import "../../styles/mixin";
+
+// Location
+.location {
+  height: 50px;
+  background-color: #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  i {
+    height: 16px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: #353535;
+  }
+}
+// Reservation
+.reservation {
+  height: 240px;
+  padding: 30px 0 30px 0;
+  background-color: $color-reservation-restaurants;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  h1,
+  p {
+    text-align: center;
+    margin: 0;
+  }
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    @media screen and (min-width: 1025px) {
+      font-size: 40px;
+    }
+  }
+  p {
+    font-size: 18px;
+    font-weight: 300;
+    color: #353535;
+  }
+}
+/* Fonctionnement */
+.fonctionnement {
+  @include fonctionnement-restaurants__container;
+  display: flex;
+  flex-wrap: wrap;
+justify-content: flex-start;  
+gap: 25px;
+  padding: 50px 0;
+  ul {
+    width: 100%;
+    padding: 0;
+    counter-reset: item;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    @media screen and (min-width: 1025px) {
+      flex-direction: row;
+      gap: 50px;
+    }
+    h2 {
+      width: 100%;
+    }
+    li {
+      width: calc(100% - 12px);
+      padding: 25px;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      font-weight: 500;
+      font-size: 16px;
+      @media screen and (min-width: 1025px) {
+        width: 31%;
+      }
+      &::before {
+        content: counter(item);
+        counter-increment: item;
+        position: absolute;
+        left: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: rgba(147, 86, 220, 1);
+        font-family: Roboto;
+        font-weight: 500;
+        font-size: 14px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        margin-right: 30px;
+        @media screen and (min-width: 1025px) {
+          margin-right: 0;
+
+        }
+      }
+      i {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .fa-mobile-screen-button {
+        width: 13px;
+        height: 20px;
+      }
+      .fa-mobile-screen-button,
+      .fa-list {
+        color: #7e7e7e;
+      }
+      .fa-store {
+        height: 18px;
+        color: #9356dc;
+      }
+    }
+  }
+}

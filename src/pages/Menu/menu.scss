@@ -1,0 +1,64 @@
+.imgResto {
+  position: relative;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  margin: 0;
+  @media screen and (min-width: 769px) {
+    height: 329px;
+  }
+}
+// Main
+.mainMenu {
+  position: relative;
+  height: 1405px;
+  @media screen and (min-width: 769px) {
+    height: 1455px;
+  }
+}
+// Section
+.menu {
+  position: absolute;
+  width: 100%;
+  top: 825px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(246, 246, 246, 1);
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding: 40px 0 40px 0;
+  @media screen and (min-width: 769px) {
+    width: 87%;
+    top: 875px;
+  }
+  @media screen and (min-width: 1025px) {
+    width: 73%;
+  }
+  .titleRestaurant {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    @media screen and (min-width: 769px) {
+      gap: 20px;
+      padding-right: 0;
+    }
+    h1 {
+      margin: 0;
+      font-family: "Shrikhand";
+      font-size: 28px;
+      font-style: italic;
+      font-weight: 400;
+    }
+    .fa-heart {
+      position: relative;
+    }
+  }
+}

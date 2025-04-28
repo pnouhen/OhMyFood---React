@@ -1,0 +1,18 @@
+* {
+    position: relative;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+  }
+  .loading {
+    animation: opacity 2s forwards;
+  }
+  
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
