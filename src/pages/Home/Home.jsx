@@ -18,7 +18,7 @@ export default function Home() {
       .then((data) => setData(data))
       .catch((err) => console.log(err))
       .finally(() => setLoading(false));
-  });
+  }, []);
 
   if (loading) {
     return <p className="loading">Chargement...</p>;
